@@ -12,6 +12,9 @@
 		3708F05E2304631A007B0EA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3708F05C2304631A007B0EA1 /* Main.storyboard */; };
 		3708F0602304631C007B0EA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3708F05F2304631C007B0EA1 /* Assets.xcassets */; };
 		3708F0632304631C007B0EA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3708F0612304631C007B0EA1 /* LaunchScreen.storyboard */; };
+		3748D4932346440100164A9E /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3748D4922346440100164A9E /* SecondVC.swift */; };
+		37D2DA8A231C55B000FA3F85 /* ok.html in Resources */ = {isa = PBXBuildFile; fileRef = 37D2DA89231C55B000FA3F85 /* ok.html */; };
+		37D2DA90231C5A7600FA3F85 /* WKYTPlayerView in Resources */ = {isa = PBXBuildFile; fileRef = 37D2DA8F231C5A7600FA3F85 /* WKYTPlayerView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		3708F05F2304631C007B0EA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3708F0622304631C007B0EA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3708F0642304631C007B0EA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3748D4922346440100164A9E /* SecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
+		37D2DA89231C55B000FA3F85 /* ok.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ok.html; sourceTree = "<group>"; };
+		37D2DA8F231C5A7600FA3F85 /* WKYTPlayerView */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WKYTPlayerView; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +60,12 @@
 		3708F0572304631A007B0EA1 /* essai2YoutubeVolume */ = {
 			isa = PBXGroup;
 			children = (
+				37D2DA89231C55B000FA3F85 /* ok.html */,
 				3708F0582304631A007B0EA1 /* AppDelegate.swift */,
 				3708F05A2304631A007B0EA1 /* ViewController.swift */,
+				3748D4922346440100164A9E /* SecondVC.swift */,
 				3708F05C2304631A007B0EA1 /* Main.storyboard */,
+				37D2DA8F231C5A7600FA3F85 /* WKYTPlayerView */,
 				3708F05F2304631C007B0EA1 /* Assets.xcassets */,
 				3708F0612304631C007B0EA1 /* LaunchScreen.storyboard */,
 				3708F0642304631C007B0EA1 /* Info.plist */,
@@ -96,6 +105,7 @@
 				TargetAttributes = {
 					3708F0542304631A007B0EA1 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1030;
 					};
 				};
 			};
@@ -122,8 +132,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37D2DA8A231C55B000FA3F85 /* ok.html in Resources */,
 				3708F0632304631C007B0EA1 /* LaunchScreen.storyboard in Resources */,
 				3708F0602304631C007B0EA1 /* Assets.xcassets in Resources */,
+				37D2DA90231C5A7600FA3F85 /* WKYTPlayerView in Resources */,
 				3708F05E2304631A007B0EA1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3708F05B2304631A007B0EA1 /* ViewController.swift in Sources */,
+				3748D4932346440100164A9E /* SecondVC.swift in Sources */,
 				3708F0592304631A007B0EA1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +295,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BYQXG5B873;
 				INFOPLIST_FILE = essai2YoutubeVolume/Info.plist;
@@ -291,6 +305,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nicokla.essai2YoutubeVolume;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -300,6 +315,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BYQXG5B873;
 				INFOPLIST_FILE = essai2YoutubeVolume/Info.plist;

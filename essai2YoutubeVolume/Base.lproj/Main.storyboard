@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,125 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="essai2YoutubeVolume" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZS7-au-J4M">
+                                <rect key="frame" x="14" y="163" width="78" height="65"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="78" id="aav-ZR-cFO"/>
+                                    <constraint firstAttribute="height" constant="65" id="yvE-Uk-VRo"/>
+                                </constraints>
+                            </webView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZtI-HC-MGr">
+                                <rect key="frame" x="41" y="424" width="233" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="bIR-xT-gM4"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="volumeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="2D4-mg-Goe"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYc-ai-qtj">
+                                <rect key="frame" x="139" y="522" width="42" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20.5" id="JtE-ho-CVf"/>
+                                    <constraint firstAttribute="width" constant="42" id="a0x-nd-NTH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2K2-QV-PJQ">
+                                <rect key="frame" x="130.5" y="40" width="59" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="59" id="WA4-9h-fLN"/>
+                                    <constraint firstAttribute="height" constant="30" id="fpP-Zu-Byo"/>
+                                </constraints>
+                                <state key="normal" title="pause"/>
+                                <connections>
+                                    <action selector="playPauseAction:" destination="BYZ-38-t0r" eventType="touchDown" id="pzJ-x8-gKc"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="uO0-gL-CqA">
+                                <rect key="frame" x="43" y="469" width="232" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="953-iz-kvB"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderTimeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="rWN-HN-YmM"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O45-Ll-jFc">
+                                <rect key="frame" x="222" y="197" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="next"/>
+                                <connections>
+                                    <action selector="nextButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HWR-op-1qt"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uO0-gL-CqA" secondAttribute="trailing" constant="47" id="40G-i3-oqw"/>
+                            <constraint firstItem="bYc-ai-qtj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7EY-VN-uEu"/>
+                            <constraint firstItem="2K2-QV-PJQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F4D-V7-YV3"/>
+                            <constraint firstItem="ZS7-au-J4M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-107" id="KMD-DV-gb4"/>
+                            <constraint firstItem="ZS7-au-J4M" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-88.5" id="KcP-0e-wI1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZtI-HC-MGr" secondAttribute="trailing" constant="48" id="Nmc-c8-YXw"/>
+                            <constraint firstItem="2K2-QV-PJQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="TGI-F1-TdD"/>
+                            <constraint firstItem="bYc-ai-qtj" firstAttribute="top" secondItem="uO0-gL-CqA" secondAttribute="bottom" constant="24" id="VBj-4n-hrf"/>
+                            <constraint firstItem="ZtI-HC-MGr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="43" id="kdc-jm-QQF"/>
+                            <constraint firstItem="ZtI-HC-MGr" firstAttribute="top" secondItem="ZS7-au-J4M" secondAttribute="bottom" constant="196" id="m6J-bN-tKQ"/>
+                            <constraint firstItem="uO0-gL-CqA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="oDG-tS-czM"/>
+                            <constraint firstItem="uO0-gL-CqA" firstAttribute="top" secondItem="ZtI-HC-MGr" secondAttribute="bottom" constant="16" id="xNV-Bb-v0n"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="myTextView" destination="bYc-ai-qtj" id="eKV-hB-L5E"/>
+                        <outlet property="myWebView" destination="ZS7-au-J4M" id="KEX-nV-ueB"/>
+                        <outlet property="playPauseButton" destination="2K2-QV-PJQ" id="OS2-ow-Yg1"/>
+                        <outlet property="sliderTime" destination="uO0-gL-CqA" id="8N2-c7-xtc"/>
+                        <outlet property="volumeSlider" destination="ZtI-HC-MGr" id="Z9c-j0-0r3"/>
+                        <segue destination="Nrp-Ro-pBL" kind="show" identifier="nextoutou" id="tED-2A-rRU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138.75" y="133.09859154929578"/>
+        </scene>
+        <!--SecondVC-->
+        <scene sceneID="ZZ9-xB-yqj">
+            <objects>
+                <viewController id="Nrp-Ro-pBL" customClass="SecondVC" customModule="essai2YoutubeVolume" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0D8-W0-AHP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4KG-1l-QXZ">
+                                <rect key="frame" x="104" y="171" width="66" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <action selector="goBackToOneButtonTapped:" destination="Nrp-Ro-pBL" eventType="touchUpInside" id="npx-d2-zhe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="fW0-CX-GmN"/>
+                    </view>
+                    <connections>
+                        <segue destination="Mkk-NK-zoT" kind="unwind" identifier="myUnwindSegue" unwindAction="unwindToVC1WithSegue:" id="v8n-ds-1gH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nnu-GC-Gkw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Mkk-NK-zoT" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="995.625" y="137.32394366197184"/>
         </scene>
     </scenes>
 </document>
